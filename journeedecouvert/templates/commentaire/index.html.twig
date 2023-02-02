@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommentaireController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h4>Commentaires </h4>
+    <h6> <a href="{{ url('commentaireAdd', {jd_id:jd_id}) }}" class="btn btn-success">Ajouter un nouveau commentaire</a> </h6>
+    {% for commentaire in commentaires %}
+        <div class="col-md-6">
+            {{ commentaire.content }} <a href="{{ url('commentaireDetails', {id:commentaire.id, jd_id:jd_id}) }}">Details</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

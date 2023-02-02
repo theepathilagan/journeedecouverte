@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CommentaireController!{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h4>Commentaire </h4>
+        <div class="col-md-6">
+            {{ commentaire.content }}
+        </div>
+
+        <a href="{{ url('commentaires',{id:jd_id}) }}" class="btn btn-success">Retour à la Journée découverte</a>
+    </div>
+{% endblock %}
